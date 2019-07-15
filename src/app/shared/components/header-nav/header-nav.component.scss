@@ -1,0 +1,193 @@
+@import 'styles.scss';
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.login--strip{
+  background-color: #f4f4f4;
+  padding: 7px 0;
+  .strip--wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .lang{
+          font-size: 14px;
+          color: #000;
+          margin-right: 12px;
+      }
+      select{
+          width: 162px;
+          height: 24px;
+          border-radius: 2px;
+          border: solid 1px #a8d9a8;
+          background-color: #d7ffd7;  
+          color: #000;  
+          padding: 0 7px;   
+      }
+      ul{
+          list-style-type: none;
+          li{
+              display: inline-block;
+              a{
+                  font-size: 14px;
+                  color: #000;
+                  &:hover{
+                      cursor: pointer;
+                  }
+              }                
+              &.divider{
+                  margin: 0 20px;
+              }
+          }
+      }
+  }
+  
+}
+
+.header--wrapper{
+  align-items: center;
+  padding: 5px 15px;
+  box-shadow: 0 0 5px #ddd;
+  ul{
+    &.nav--links{
+      li{
+        list-style-type: none;
+        a{
+          font-size: 14px;
+          color: #000;
+          text-transform: uppercase;
+          padding: 0 25px;
+          font-family: $font--1--bold;
+          &.active,
+          &:hover{
+              cursor: pointer;
+              color: #00d797;
+          }          
+        }
+        &:last-child{
+          a{
+            padding-right: 0;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+// for mobile device
+.toggle--left--panel{
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+}
+.sm--logo{
+  border-bottom: 1px solid #f5f5f5;
+  padding: 8px 10px 7px 10px;
+  height: auto;
+  box-shadow: 0 0 10px #dce1e2;
+}
+.mobile--links{
+  flex-direction: column !important;
+  li{
+    display: block;
+    list-style-type: none; 
+    a{
+      padding: 9px 15px;
+      font-family: $font--1;
+      display: flex;
+      font-size: 14px;
+      border-bottom: 1px solid #e8e2e2;
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------
+    Media query (start here)
+--------------------------------------------------------------------------------------------------------------------------------------------------*/
+.sidenav{
+  display: none
+}
+
+
+
+// iPad (for temparary, its an jugad > remove after find correct solution)
+@media (device-height: 768px) and (device-width: 1024px){
+ 
+}
+@media (device-height: 1024px) and (device-width: 768px){
+  .sidenav{
+      display: none !important;
+  }
+  .csa--wrapper .banner--wrapper {
+      height: 30vh !important;
+  }
+}
+// iPad (for temparary, its an jugad > remove after find correct solution)
+
+
+
+@media only screen and (max-width: 599px) {
+ 
+  .sidenav{
+    display: block
+  }
+  .login--strip .strip--wrapper .lang{
+    display: none
+  }
+  .login--strip .strip--wrapper ul li.divider {
+    margin: 0 10px;
+  }
+  .login--strip .strip--wrapper select {
+    width: 120px;
+  }
+ 
+}
+@media only screen and (min-width: 600px) and (max-width: 960px){
+  .toggle--left--panel{
+    display: inline-block;
+  }
+  .sidenav{
+    display: block
+  }
+  .header--wrapper ul.nav--links li a{
+      padding: 0 10px;
+  }
+  .header--wrapper ul.nav--links li a {
+    font-size: 12px;
+    padding: 0 5px;
+  }
+}
+@media only screen and (min-width: 961px) and (max-width: 1279px){
+  .header--wrapper ul.nav--links li a{
+      padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1440px){
+  .header--wrapper ul.nav--links li a{
+      padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1550px){}
+
+@media screen and (orientation:landscape) and (max-width: 850px){
+  .nav--links{
+    display: none !important;
+  }
+}

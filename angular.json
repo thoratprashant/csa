@@ -4,14 +4,14 @@
   "newProjectRoot": "projects",
   "projects": {
     "csa": {
+      "root": "",
+      "sourceRoot": "src",
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "",
-      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles/app.scss"
             ],
             "scripts": []
           },
@@ -88,7 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles/app.scss"
             ],
             "scripts": []
           }
@@ -120,5 +120,14 @@
         }
       }
     }},
-  "defaultProject": "csa"
+  "defaultProject": "csa",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
 }

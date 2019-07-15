@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="183" height="55">
+    <path fill="#00D797" fill-rule="evenodd" d="M68.639 0L20.157 53H69l-.361-53z"/>
+    <path fill="#FFF" fill-rule="evenodd" d="M58 27v26H45l13-26z"/>
+    <path fill="#086B4E" fill-rule="evenodd" d="M25 3c13.807 0 25 11.193 25 25S38.807 53 25 53 0 41.807 0 28 11.193 3 25 3z"/>
+    <text fill="#FFF" font-family="Gotham" font-size="51" font-weight="bold" transform="matrix(.75965 0 0 .75263 11.49 40.93)">
+        C
+    </text>
+    <text fill="#FFF" font-family="Gotham" font-size="41" transform="matrix(.7282 0 0 .72147 32.427 42.461)">
+        S
+    </text>
+    <text x="90" y="55" font-family="Gotham" font-size="16">
+        <tspan dy="-18.141">Community </tspan><tspan x="90" dy="1.009em">Security App</tspan>
+    </text>
+    <path fill-rule="evenodd" d="M79 24h1v29h-1V24z"/>
+</svg>

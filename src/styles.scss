@@ -1,1 +1,228 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham-Book.eot');
+  src: url('assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Gotham-Book.woff2') format('woff2'),
+      url('assets/fonts/Gotham-Book.woff') format('woff'),
+      url('assets/fonts/Gotham-Book.ttf') format('truetype'),
+      url('assets/fonts/Gotham-Book.svg#Gotham-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamNormal';
+  src: url('assets/fonts/Gotham-Light.eot');
+  src: url('assets/fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Gotham-Light.woff2') format('woff2'),
+      url('assets/fonts/Gotham-Light.woff') format('woff'),
+      url('assets/fonts/Gotham-Light.ttf') format('truetype'),
+      url('assets/fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('assets/fonts/Gotham-Medium.eot');
+  src: url('assets/fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Gotham-Medium.woff2') format('woff2'),
+      url('assets/fonts/Gotham-Medium.woff') format('woff'),
+      url('assets/fonts/Gotham-Medium.ttf') format('truetype'),
+      url('assets/fonts/Gotham-Medium.svg#Gotham-Medium') format('svg');
+  font-weight: 200 !important;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url('assets/fonts/Gotham-Bold.eot');
+  src: url('assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Gotham-Bold.woff2') format('woff2'),
+      url('assets/fonts/Gotham-Bold.woff') format('woff'),
+      url('assets/fonts/Gotham-Bold.ttf') format('truetype'),
+      url('assets/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamBlack';
+  src: url('assets/fonts/Gotham-Black.eot');
+  src: url('assets/fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Gotham-Black.woff2') format('woff2'),
+      url('assets/fonts/Gotham-Black.woff') format('woff'),
+      url('assets/fonts/Gotham-Black.ttf') format('truetype'),
+      url('assets/fonts/Gotham-Black.svg#Gotham-Black') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+html,
+body{
+  height: 100%;
+  font-size: 16px;
+}
+
+// font's veriable
+$font--1: Gotham;
+$font--1--normal: GothamNormal;
+$font--1--medium: GothamMedium;
+$font--1--bold: GothamBold;
+$font--1--black: GothamBlack;
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: $font--1--normal;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: $font--1--bold;
+  font-weight: 500;
+}
+p{
+  font-family: $font--1--normal;
+}
+
+
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+select,
+button,
+textarea,
+input {
+  vertical-align: baseline;
+}
+div {
+  box-sizing: border-box;
+}
+html, body {
+  &[dir=rtl], &[dir=ltr] {
+     unicode-bidi: embed
+  }
+}
+bdo[dir=rtl] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+bdo[dir=ltr] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+.mat-card {
+  font-size: .875rem;
+}
+img:not(.mat-card-image) {
+  max-width: 100%;
+}
+a, a:focus, a:hover {
+  text-decoration: none;
+}
+a {
+  color: inherit;
+}
+p {
+  margin: 0 0 16px;
+}
+
+.h1,h1 {
+  font-size: 2rem;
+}
+.h2,h2 {
+  font-size: 1.75rem;
+}
+.h3,h3 {
+  font-size: 1.5rem;
+}
+.h4,h4 {
+  font-size: 1.25rem;
+}
+.h5,h5 {
+  font-size: 1rem;
+}
+.h6,h6 {
+  font-size: .875rem;
+}
+
+/*---- Common -----*/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.bg-none {
+  background: transparent !important;
+}
+.bg-white {
+  background: #ffffff !important;
+}
+.m-0 {margin: 0 !important;}
+.m-1 {margin: 1rem !important;}
+.mt-1 {margin-top: 1rem !important;}
+.mt-0 {margin-top: 0 !important;}
+.mr-1 {margin-right: 1rem !important;}
+.mr-0 {margin-right: 0 !important;}
+.mb-1 {margin-bottom: 1rem !important;}
+.mb-0 {margin-bottom: 0 !important;}
+.ml-1 {margin-left: 1rem !important;}
+.ml-0 {margin-left: 0 !important;}
+// Padding
+.p-0 {padding: 0 !important;}
+.p-1 {padding: 1rem !important;}
+.pt-1 {padding-top: 1rem !important;}
+.pt-0 {padding-top: 0 !important;}
+.pr-1 {padding-right: 1rem !important;}
+.pr-0 {padding-right: 0 !important;}
+.pb-1 {padding-bottom: 1rem !important;}
+.pb-0 {padding-bottom: 0 !important;}
+.pl-1 {padding-left: 1rem !important;}
+.pl-0 {padding-left: 0 !important;}
+
+
+.mat-box-shadow {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+
+
+.fs-1 {
+  font-size: 1rem !important;
+}
+.fs-2 {
+  font-size: 2rem !important;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-muted {
+  color: rgba(0, 0, 0, .54) !important;
+}
+
+.align--items--center{
+  align-items: center;
+}
+
+
+// 
+.mat-drawer-content{
+  background-color: #fff;
+}
+.full--width{
+  width: 100%;
+}
+textarea{
+  resize: none !important;
+}

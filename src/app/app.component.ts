@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'csa';
+
+  constructor(){}
+
+  gotoTop() {
+    const content = document.getElementsByClassName('csa--wrapper')[0]
+    content.scrollTo(0,0);
+  }
+  
+
 }
