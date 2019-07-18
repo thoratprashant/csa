@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { HeaderNavComponent } from './components/header-nav/header-nav.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+
 // import { FlexLayoutModule } from '@angular/flex-layout';
 // import { TranslateModule } from '@ngx-translate/core';
 // import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -41,10 +42,18 @@ import {
   MatSliderModule
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
+import { LandingComponent } from 'app/views/landing/landing.component';
+import { SignInComponent } from './components/auth/sign-in/sign-in.component';
+import { PrimaryButtonDirective, SecondaryButtonDirective} from './directives/button.directive';
 
 var moduleToExport = [
     AppComponent,
     HeaderNavComponent,
+    LandingComponent,
+    SignInComponent,
+    PrimaryButtonDirective,
+    SecondaryButtonDirective,
+   
 ]
 
 @NgModule({

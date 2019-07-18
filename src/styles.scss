@@ -226,3 +226,21 @@ p {
 textarea{
   resize: none !important;
 }
+
+@mixin button-style{
+  font-size: 16px;
+  font-family: $font--1;
+  padding: 5px 25px;
+  height: 36px;
+  line-height: 25px; 
+}
+.primary-button {
+  @include button-style;
+  background: #086a4d;
+  color: #fff;
+}
+.secondary-button{
+  @include button-style;
+  background: #ccc;
+  color: #524f4f;
+}

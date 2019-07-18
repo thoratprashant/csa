@@ -7,12 +7,6 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor(){}
-
-  gotoTop() {
-    const content = document.getElementsByClassName('csa--wrapper')[0]
-    content.scrollTo(0,0);
-  }
-  
+  constructor(){}  
 
 }

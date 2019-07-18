@@ -1,0 +1,17 @@
+@import 'styles.scss';
+
+.signin--wrapper{
+    width: 23%;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    padding: 50px;
+    .mat-card-header{
+        img {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+}
+.full--width{
+    width: 100%;
+}
