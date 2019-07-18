@@ -2,16 +2,40 @@
     <mat-card-header>
         <img alt="logo" src="../../../../assets/images/logo-header.svg">
     </mat-card-header>
+
     <mat-card-content>
-        <mat-form-field class="full--width">
-            <input matInput placeholder="Username" type="email">
-        </mat-form-field>
-        <mat-form-field class="full--width">
-            <input matInput placeholder="Password" type="password">
-        </mat-form-field>
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="full--width">
+                <input matInput placeholder="Email Id" type="email" formControlName="emailId" (keyup)="onKeyup($event)">
+            </mat-form-field>
+            <div class="error--handing" *ngIf="f().emailId.errors && f().emailId.errors.required">
+                <p>Email is required</p>
+            </div>
+            <mat-form-field class="full--width">
+                <input matInput placeholder="Password" type="password" formControlName="password" (keyup)="onKeyup($event)">
+            </mat-form-field>
+            <div class="error--handing" *ngIf="f().password.errors && f().password.errors.required">
+                <p>Password is required</p>
+            </div>
+            <!-- <div class="error--handing" *ngIf="f().password.errors && f().password.errors.maxlength">
+                <p>Password length should be minimum 6</p>
+            </div> -->
+
+            <div class="error--handing" *ngIf="accessToken">
+                <p>Login Successfully</p>
+            </div>
+            <div class="error--handing" *ngIf="errorMsg">
+                <p>{{errorMsg}}</p>
+            </div>
+
+            <div class="form--btns text-center">
+                <button type="button" mat-stroked-button secondary-button class="mr-1"
+                    [disabled]="!signInForm.valid">Cancel</button>
+                <button mat-stroked-button primary-button [disabled]="!signInForm.valid">Sign in</button>
+            </div>
+
+        </form>
     </mat-card-content>
-    <mat-card-actions class="text-center">
-        <button mat-stroked-button secondary-button class="mr-1">Cancel</button>
-        <button mat-stroked-button primary-button>Sign in</button>
-    </mat-card-actions>
+
+
 </mat-card>

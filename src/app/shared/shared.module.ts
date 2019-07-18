@@ -45,6 +45,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { LandingComponent } from 'app/views/landing/landing.component';
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
 import { PrimaryButtonDirective, SecondaryButtonDirective} from './directives/button.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 var moduleToExport = [
     AppComponent,
@@ -91,7 +92,8 @@ var moduleToExport = [
     MatSliderModule,
     BrowserAnimationsModule,
     LayoutModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
     // FlexLayoutModule,
     // TranslateModule,
     // PerfectScrollbarModule,
